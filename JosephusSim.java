@@ -26,8 +26,7 @@ public class JosephusSim {
          last.next = circle;
 
          // remember the last node as the one in front of the next to get eliminated
-         
-         
+         track = last;
          
          // generate, print, and save the random elimination count
 
@@ -36,9 +35,23 @@ public class JosephusSim {
       }
    }
    
+   
    // optional helper method for constructing the circle
    private void add(String val) {
+      PersonNode newNode = new PersonNode(val);
+      
+      if (circle == null) {
+         circle = newNode;
+      } else {
+         PersonNode last = circle;
+         while (last.next != null) {
+            last = last.next;
+         }
+         last.next = newNode;
+      }
+      size++;   
    }
+
    
    public void eliminate() {
       // count to the elimination count
