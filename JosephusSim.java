@@ -11,7 +11,6 @@ public class JosephusSim {
       try {
          // load names from the file in order, generating a singly linked list of PersonNodes
          Scanner file = new Scanner(new File(fileName));
-         LinkedList<String> names = new LinkedList<>();
          
          // using add() helper
          while(file.hasNext()) {
