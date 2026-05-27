@@ -13,10 +13,11 @@ public class JosephusSim {
          Scanner file = new Scanner(new File(fileName));
          LinkedList<String> names = new LinkedList<>();
          
+         // using add() helper
          while(file.hasNext()) {
-            String token = file.next();
-            names.add(token);
+            add(file.next());
          }
+         
          
          // make the ring circular by attaching last node's next to front
          PersonNode last = track;
