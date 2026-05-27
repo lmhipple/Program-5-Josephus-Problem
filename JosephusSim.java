@@ -20,7 +20,7 @@ public class JosephusSim {
          
          
          // make the ring circular by attaching last node's next to front
-         PersonNode last = track;
+         PersonNode last = circle;
          while (last.next != null) {
             last = last.next;
          }
