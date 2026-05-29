@@ -27,7 +27,11 @@ public class JosephusSim {
 
          // remember the last node as the one in front of the next to get eliminated
          track = last;
-         
+
+         Random rand = new Random();
+         // remember rand.nextInt(n) is 0 to n-1
+         eliminationCount = rand.nextInt(size/2) + 1;
+         System.out.println("=== Elimination count is " + eliminationCount + " ===");
          // generate, print, and save the random elimination count
 
       } catch(FileNotFoundException e) {
