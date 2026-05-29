@@ -85,9 +85,14 @@ public class JosephusSim {
          } else {
             String result = "Remaining survivors: ";
             PersonNode current = circle;
+            int count = 1;
             do {
-               result += current.name + " ";
+               result += count + "-" + current.name;
                current = current.next;
+               count++;
+               if (current != circle) {
+                  result += ", ";
+               }
          } while(current != circle);
          return result;
          }
