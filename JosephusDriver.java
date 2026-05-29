@@ -4,7 +4,9 @@ public class JosephusDriver {
 
    public static void main(String[] args) {
       Scanner console = new Scanner(System.in);
-      JosephusSim simulation = new JosephusSim("people.txt");
+      JosephusSim simulation = new JosephusSim("people3.txt");
+      // JosephusSim simulation = new JosephusSim("people.txt");
+      // JosephusSim simulation = new JosephusSim("people2.txt");
       
       while(!simulation.isOver()) {
          System.out.println(simulation);
